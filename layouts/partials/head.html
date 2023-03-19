@@ -59,7 +59,7 @@
     {{ end }}
     <script src="{{ "javascripts/modernizr.js" | relURL }}"></script>
 
-    {{ with .RSSLink }}
+    {{ with .OutputFormats.Get "RSS" }}
     <link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
     <link href="{{ . }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{ end }}
