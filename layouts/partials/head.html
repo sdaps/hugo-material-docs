@@ -41,7 +41,7 @@
     {{/* set default values if no custom ones are defined */}}
     {{ $text := .Site.Params.font.text }}
     {{ $code := .Site.Params.font.code }}
-    {{ if (not .Site.Params.font.text) and (not .Site.Params.font.code) }}
+    {{ if and (not .Site.Params.font.text) (not .Site.Params.font.code) }}
     {{ else }}
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ $text }}:400,700|{{ replace  $code " " "+" | safeURL }}">
     <style>
